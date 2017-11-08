@@ -32,7 +32,7 @@ class CLImageViewPopup: UIImageView {
     }
     
     //MARK: Actions of Gestures
-    func exitFullScreen () {
+    @objc func exitFullScreen () {
         let imageV = bgView.subviews[0] as! UIImageView
         
         UIView.animate(withDuration: intDuration, animations: {
@@ -43,7 +43,7 @@ class CLImageViewPopup: UIImageView {
         }) 
     }
     
-    func popUpImageToFullScreen() {
+    @objc func popUpImageToFullScreen() {
         
         if let window = UIApplication.shared.delegate?.window {
             let parentView = self.findParentViewController(self)!.view
